@@ -19,7 +19,7 @@ export const LoadingExample = ({id, timeout = 3000}: PropsWithChildren<{id: stri
     }, []);
 
     if(state === 'loading'){
-        return <div role={'progressbar'} aria-label={'LoadingComponent'+id} >
+        return <div role={'progressbar'} aria-label={id} >
             <CircularProgress />
         </div>
     }
