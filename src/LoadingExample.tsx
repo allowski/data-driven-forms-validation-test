@@ -1,5 +1,5 @@
 import {PropsWithChildren, useEffect, useState} from "react";
-import {Button, CircularProgress} from "@mui/material";
+import {Button} from "@mui/material";
 
 export const LoadingExample = ({id, timeout = 3000}: PropsWithChildren<{id: string, timeout: number}>) => {
 
@@ -19,9 +19,7 @@ export const LoadingExample = ({id, timeout = 3000}: PropsWithChildren<{id: stri
     }, []);
 
     if(state === 'loading'){
-        return <div role={'progressbar'} aria-label={id} >
-            <CircularProgress />
-        </div>
+        return <div role={'progressbar'}></div>
     }
 
     return <div>

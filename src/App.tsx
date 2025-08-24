@@ -3,6 +3,7 @@ import {componentTypes, FormRenderer} from "@data-driven-forms/react-form-render
 import {componentMapper} from "@data-driven-forms/mui-component-mapper";
 import MUIFT from "@data-driven-forms/mui-component-mapper/form-template"
 import {LoadingExample} from "./LoadingExample.tsx";
+import {GameBoard} from "./game/components/game-board.tsx";
 
 const UniqueNameVal = (options: object) => {
     return (value: string, all, meta) => {
@@ -69,6 +70,7 @@ function App() {
   return (
     <>
       <div>
+          <GameBoard />
           <h1>Test Application</h1>
           <LoadingExample id={'first'} timeout={2500} />
           <LoadingExample id={'second'} timeout={3500} />
